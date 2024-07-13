@@ -76,5 +76,18 @@ def find(id)
     end
   end
 
+  def ordered_by_qualifications(candidates)
+    
+    sorted_candidates = candidates.sort_by do |candidate|
+      [-candidate[:years_of_experience], -candidate[:github_points]]
+    end
+
+    return sorted_candidates
+
+  end
+
+
+
+
 
   
